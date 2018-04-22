@@ -10,8 +10,8 @@ var SpotifyWebApi = require('spotify-web-api-node');
 
 // credentials are optional
 var spotifyApi = new SpotifyWebApi({
-  clientId : '92bb16b234a643e695e983dad6d1c1d5',
-  clientSecret : '5a5a20cc6f664450ae882647bb54bfb8',
+  clientId : '',
+  clientSecret : '',
   redirectUri : 'http://localhost:8888/callback/'
 });
 
