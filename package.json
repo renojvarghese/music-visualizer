@@ -1,12 +1,23 @@
 {
-  "author": "Spotify",
-  "name": "web-api-auth-examples",
-  "description": "Basic examples of the Spotify authorization flows through OAuth 2",
-  "version": "0.0.2",
+  "author": "Renoj Varghese",
+  "name": "music-visualizer",
+  "description": "making the internet dance",
+  "version": "0.0.1",
   "dependencies": {
     "cookie-parser": "1.3.2",
     "express": "~4.16.0",
     "querystring": "~0.2.0",
-    "request": "~2.83.0"
+    "request": "~2.83.0",
+    "spotify-web-api-node": "~3.0.0"
+  },
+  "scripts": {
+  "test": "npm run scss-compile",
+
+  "scss-compile": "node-sass -rw public/scss/ -o public/css/",
+
+  "watch": "npm run scss-compile"
+},
+  "devDependencies": {
+    "node-sass": "^4.8.3"
   }
 }

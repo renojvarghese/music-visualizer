@@ -5,9 +5,28 @@ var request = require('request'); // "Request" library
 var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
 
-var client_id = ''; // Your client id
-var client_secret = ''; // Your secret
+
+var SpotifyWebApi = require('spotify-web-api-node');
+
+// credentials are optional
+var spotifyApi = new SpotifyWebApi({
+  clientId : '92bb16b234a643e695e983dad6d1c1d5',
+  clientSecret : '5a5a20cc6f664450ae882647bb54bfb8',
+  redirectUri : 'http://localhost:8888/callback/'
+});
+
+var client_id = '92bb16b234a643e695e983dad6d1c1d5'; // Your client id
+var client_secret = '5a5a20cc6f664450ae882647bb54bfb8'; // Your secret
 var redirect_uri = 'http://localhost:8888/callback/'; // Your redirect uri
+
+var SpotifyWebApi = require('spotify-web-api-node');
+
+// credentials are optional
+var spotifyApi = new SpotifyWebApi({
+  clientId : client_id,
+  clientSecret : client_secret,
+  redirectUri : redirect_uri
+});
 
 
 var generateRandomString = function(length) {
@@ -129,6 +148,7 @@ app.get('/refresh_token', function(req, res) {
     }
   });
 });
+
 
 console.log('Listening on 8888');
 app.listen(8888);
